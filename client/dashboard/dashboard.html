@@ -1,0 +1,32 @@
+<template name="dashboard">
+	<a href="#" class="pull-right" id="btn-logout">Logout</a>
+	<br>
+{{> userList}}
+</template>
+
+
+<template name="userList">
+	<div class="container">
+	  <h2>Users in this Application</h2>
+	  <table class="table table-hover">
+	    <thead>
+	      <tr>
+	        <th>Email</th>
+	        <th>cratedAt</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+		    {{#each users}}
+			      <tr>
+			        <td><a href="/messages/{{this._id}}">{{getEmail}}</a></td>
+			        <td>{{createdAt}}</td>
+			      </tr>
+		    {{/each}}
+	    </tbody>
+	  </table>
+	</div>
+<!-- {{#each Lists}}
+<li>{{_id}}:{{emails}}</li>
+{{/each}}
+</ul> -->
+</template>

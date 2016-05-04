@@ -1,0 +1,16 @@
+<template name="messages">
+	Hi you are in messages.
+	
+	<div class="listMessages" style="margin-left: 20%; margin-right: 20%; width: 765 px; height: 500px; margin-top: 2%; overflow: auto;">
+		{{#each messages}}
+			<div class="message">
+				<p> <span class="useName"> {{messageSentBy}} </span>: {{this.message}} </p>
+			</div>	
+		{{/each}}
+	</div>
+	<div class="enter-message"  style="margin-left: 20%; margin-right: 20%;  margin-top: 2%;">
+		<input type="text" id="enter_message" placeholder="Enter Your Message Here.." style="width:710px" />
+		<button class='btn btn-default' id="sendMessage"> send</button>
+	</div>
+	
+</template>
